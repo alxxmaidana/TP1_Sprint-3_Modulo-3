@@ -181,9 +181,8 @@ export async function actualizarSuperheroePorIdController(req, res) {
 				mesagge: "No se encontró el superhéroe, no se pudo actualizar",
 			});
 		} else {
-			const superheroes = await obtenerTodosLosSuperheroes();
-			const superheroesFormateados = renderizarlistaSuperheroes(superheroes);
-			res.status(200).json(superheroesFormateados);
+			const superheroeFormateado = renderizarSuperheroe(superheroeEncotrado);
+			res.status(200).json(superheroeFormateado);
 		}
 	} catch (err) {
 		res.status(500).send({

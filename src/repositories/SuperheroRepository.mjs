@@ -49,7 +49,9 @@ class SuperheroRepository extends IRepository {
 
 	// ACTUALIZAR SUPERHÉROE
 	async actualizarSuperheroe(id, actualizacion) {
-		return await Superhero.findByIdAndUpdate(id, actualizacion);
+		return await Superhero.findByIdAndUpdate(id, actualizacion, { returnDocument: "after" });
+		/* { returnDocument } devuelve el documento despues de la actualización, por defecto el método
+		findByIdAndUpdate() devuelve el documento original antes de ser actualizado */
 	}
 }
 
