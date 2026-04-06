@@ -1,4 +1,5 @@
 import Superhero from "../models/superhero.mjs";
+
 import {
 	actualizarSuperheroePorId,
 	agregarNuevoSuperheroe,
@@ -148,9 +149,7 @@ export async function eliminarSuperheroePorNombreController(req, res) {
 export async function eliminarSuperheroePorIdController(req, res) {
 	try {
 		const { id } = req.params;
-		console.log(id);
 		const superheroeEliminado = await eliminarSuperheroePorId(id);
-		console.log(superheroeEliminado);
 		if (!superheroeEliminado) {
 			return res.status(404).send({
 				mesagge: "Nose encontró el superhéroe, no se puede eliminar",
@@ -167,13 +166,13 @@ export async function eliminarSuperheroePorIdController(req, res) {
 	}
 }
 
-// ACTUALIZAR SUPERHÉROE POR ID (con el método findByIdAndUpdate())
+// ACTUALIZAR SUPERHÉROE POR ID
 export async function actualizarSuperheroePorIdController(req, res) {
 	try {
 		const { id } = req.params;
 		// findByIdAndUpdate retorna el supeheroe devuelve el documento original (antes de ser actualizado)
 		const superheroeEncotrado = await actualizarSuperheroePorId(id, {
-			$set: { edad: 300 },
+			$set: { nombreSuperheroe: "Negra Viuda" },
 		});
 
 		// Verificar si se encontró el superheroe

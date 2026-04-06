@@ -38,9 +38,7 @@ class SuperheroRepository extends IRepository {
 
 	// ELIMINAR SUPERHÉROE POR NOMBRE
 	async eliminarSuperheroe(nombreSuperheroe) {
-		return await Superhero.findOneAndDelete({
-			nombreSuperheroe: nombreSuperheroe,
-		});
+		return await Superhero.findOneAndDelete(nombreSuperheroe);
 		// findOneAndDelete() retorna el documento eliminado
 	}
 
