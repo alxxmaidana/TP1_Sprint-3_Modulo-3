@@ -1,9 +1,9 @@
 import SuperheroRepository from "../repositories/SuperheroRepository.mjs";
 
 // BUSCAR SUPERHÉROES POR ID
-// export async function obtenerSuperheroePorId(id) {
-// 	return await SuperheroRepository.obtenerPorId(id);
-// }
+export async function obtenerSuperheroePorId(id) {
+	return await SuperheroRepository.obtenerPorId(id);
+}
 // OBTENER TODOS LOS SUPERHÉROES
 export async function obtenerTodosLosSuperheroes() {
 	return await SuperheroRepository.obtenerTodos();

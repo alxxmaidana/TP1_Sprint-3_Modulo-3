@@ -19,7 +19,7 @@ router.get("/heroes", obtenerTodosLosSuperheroesController);
 // Ruta para buscar y leer un superhéroe por _id
 router.get("/heroes/buscar/id/:id", obtenerSuperheroePorIdController);
 
-// Obtener superhéroes mayores de 30, sen el planeta tierra y tengan almenos 2 poderes
+// Obtener superhéroes mayores de 30, sean el planeta tierra y tengan almenos 2 poderes
 router.get("/heroes/mayores-30", obtenerSuperheroesMayoresDe30Controller);
 
 // Ruta para buscar superhéroes por atributo y valor
