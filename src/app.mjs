@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 import express from "express";
+
 import { connectDB } from "./config/dbConfig.mjs";
 import routes from "./routes/superheroRoutes.mjs";
 
